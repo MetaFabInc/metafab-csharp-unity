@@ -12,17 +12,19 @@ namespace MetafabSdk
 		public string id;
 		public string gameId;
 		public string walletId;
+		public string connectedWalletId;
 		public string username;
 		public string accessToken;
 		public string updatedAt;
 		public string createdAt;
 		public WalletModel wallet;
 
-		public AuthPlayer200Response(string id, string gameId, string walletId, string username, string accessToken, string updatedAt, string createdAt, WalletModel wallet)
+		public AuthPlayer200Response(string id, string gameId, string walletId, string connectedWalletId, string username, string accessToken, string updatedAt, string createdAt, WalletModel wallet)
 		{
 			this.id = id;
 			this.gameId = gameId;
 			this.walletId = walletId;
+			this.connectedWalletId = connectedWalletId;
 			this.username = username;
 			this.accessToken = accessToken;
 			this.updatedAt = updatedAt;

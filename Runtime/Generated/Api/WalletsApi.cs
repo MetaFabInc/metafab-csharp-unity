@@ -27,7 +27,7 @@ namespace MetafabSdk
 		public async UniTask<Dictionary<string, float>> GetWalletBalances(string walletId, CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<Dictionary<string, float>>($"/v1/wallets/{walletId}/balances?sdk=unity");
+			return await apiClient.GetDictionary($"/v1/wallets/{walletId}/balances?sdk=unity");
 
 		}
 
