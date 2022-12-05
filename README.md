@@ -15,7 +15,7 @@ Add these lines to `Packages/manifest.json`:
 
 2. Set credentials in `Edit > Project Settings > Metafab`
 
-3. Add a GameObject to your scene with this MonoBehaviour:
+3. Add a GameObject to your scene with this MonoBehaviour in a file called `MetafabHelloWorld.cs`:
 
 ```csharp
 using System.Collections;
@@ -37,7 +37,7 @@ public class MetafabHelloWorld : MonoBehaviour
 
 ## Support
 
-The Unity SDK is a work in progress. For support, [open an issue](https://github.com/MetaFabInc/metafab-csharp-unity/issues) or [join us on discord](https://discord.gg/invite/metafab).
+The Unity SDK is a work in progress. For support, [open an issue](https://github.com/MetaFabInc/metafab-csharp-unity/issues) or [join us on discord](https://discord.gg/metafab).
 
 ## Full Example
 
@@ -53,6 +53,7 @@ Goerli testnet faucet (ETH): https://goerlifaucet.com/
 
 :money_with_wings: Mumbai faucet (MATIC): https://faucet.polygon.technology/
 
+Name this MonoBehaviour `FullMetafabExample.cs`
 
 ```csharp
 using System.Collections;
