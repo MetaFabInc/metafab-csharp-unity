@@ -15,13 +15,17 @@ namespace MetafabSdk
 		public string email;
 		public string name;
 		public Object rpcs;
+		public Object redirectUris;
+		public string iconImageUrl;
+		public string coverImageUrl;
+		public string primaryColorHex;
 		public string publishedKey;
 		public string secretKey;
 		public bool? verified;
 		public string updatedAt;
 		public string createdAt;
 
-		public GameModel(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt)
+		public GameModel(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.walletId = walletId;
@@ -29,6 +33,10 @@ namespace MetafabSdk
 			this.email = email;
 			this.name = name;
 			this.rpcs = rpcs;
+			this.redirectUris = redirectUris;
+			this.iconImageUrl = iconImageUrl;
+			this.coverImageUrl = coverImageUrl;
+			this.primaryColorHex = primaryColorHex;
 			this.publishedKey = publishedKey;
 			this.secretKey = secretKey;
 			this.verified = verified;

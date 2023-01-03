@@ -12,14 +12,22 @@ namespace MetafabSdk
 		public string id;
 		public string name;
 		public string publishedKey;
+		public List<string> redirectUris;
+		public string iconImageUrl;
+		public string coverImageUrl;
+		public string primaryColorHex;
 		public string updatedAt;
 		public string createdAt;
 
-		public PublicGame(string id, string name, string publishedKey, string updatedAt, string createdAt)
+		public PublicGame(string id, string name, string publishedKey, List<string> redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.name = name;
 			this.publishedKey = publishedKey;
+			this.redirectUris = redirectUris;
+			this.iconImageUrl = iconImageUrl;
+			this.coverImageUrl = coverImageUrl;
+			this.primaryColorHex = primaryColorHex;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
 		}

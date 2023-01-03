@@ -1,13 +1,27 @@
 # Metafab SDK For Unity
 
-## Installation (Package Manager via git url)
+## Installation (Unity Package Manager)
 
-Add these lines to `Packages/manifest.json`:
+**Option 1 - File System**
+
+Open `Packages/manifest.json` and add these lines:
 
 ```
 "com.metafab.sdk": "https://github.com/MetaFabInc/metafab-csharp-unity.git",
 "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.3"
 ```
+
+**Option 2 - Editor UI**
+
+Follow these instructions:
+
+https://docs.unity3d.com/Manual/upm-ui-giturl.html
+
+And add these urls:
+
+`https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#2.3.3`
+
+`https://github.com/MetaFabInc/metafab-csharp-unity.git`
 
 ## Getting Started
 

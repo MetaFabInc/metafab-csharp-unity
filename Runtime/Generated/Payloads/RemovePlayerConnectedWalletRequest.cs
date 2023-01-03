@@ -7,18 +7,18 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CreateContractRequest
+	public class RemovePlayerConnectedWalletRequest
 	{
 		public string address;
-		public string forwarderAddress;
-		public string abi;
+		public int nonce;
+		public string signature;
 		public string chain;
 
-		public CreateContractRequest(string address, string forwarderAddress, string abi, string chain)
+		public RemovePlayerConnectedWalletRequest(string address, int nonce, string signature, string chain)
 		{
 			this.address = address;
-			this.forwarderAddress = forwarderAddress;
-			this.abi = abi;
+			this.nonce = nonce;
+			this.signature = signature;
 			this.chain = chain;
 		}
 

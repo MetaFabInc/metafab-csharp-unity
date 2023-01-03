@@ -15,10 +15,11 @@ namespace MetafabSdk
 		public Object abi;
 		public string type;
 		public string address;
+		public string forwarderAddress;
 		public string updatedAt;
 		public string createdAt;
 
-		public ContractModel(string id, string gameId, string chain, Object abi, string type, string address, string updatedAt, string createdAt)
+		public ContractModel(string id, string gameId, string chain, Object abi, string type, string address, string forwarderAddress, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.gameId = gameId;
@@ -26,6 +27,7 @@ namespace MetafabSdk
 			this.abi = abi;
 			this.type = type;
 			this.address = address;
+			this.forwarderAddress = forwarderAddress;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
 		}

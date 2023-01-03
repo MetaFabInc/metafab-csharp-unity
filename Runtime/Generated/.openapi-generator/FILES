@@ -55,6 +55,7 @@ Payloads/PlayerModel.cs
 Payloads/PublicGame.cs
 Payloads/PublicPlayer.cs
 Payloads/PublicPlayerWallet.cs
+Payloads/RemovePlayerConnectedWalletRequest.cs
 Payloads/RevokeCollectionRoleRequest.cs
 Payloads/SetCollectionApprovalRequest.cs
 Payloads/SetCollectionItemTimelockRequest.cs
@@ -66,9 +67,11 @@ Payloads/ShopModel.cs
 Payloads/ShopOffer.cs
 Payloads/TransactionModel.cs
 Payloads/TransferCollectionItemRequest.cs
+Payloads/TransferContractOwnershipRequest.cs
 Payloads/TransferCurrencyRequest.cs
 Payloads/UpdateGameRequest.cs
 Payloads/UpdatePlayerRequest.cs
+Payloads/UpgradeContractTrustedForwarderRequest.cs
 Payloads/WalletModel.cs
 Payloads/WithdrawFromShopRequest.cs
 Payloads/WriteContractRequest.cs

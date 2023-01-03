@@ -92,6 +92,21 @@ namespace MetafabSdk
 		}
 
 		/// <summary>
+		/// Remove player connected wallet
+		/// </summary>
+		///
+		/// <remarks>
+		/// Removes an external wallet from a player account. The player's wallet is reverted to their custodial wallet.
+		/// </remarks>
+		/// <returns></returns>
+		public async UniTask<> RemovePlayerConnectedWallet(string playerId, string playerWalletId, RemovePlayerConnectedWalletRequest removePlayerConnectedWalletRequest, CancellationToken token = default)
+		{
+			
+			return await apiClient.Delete<>($"/v1/players/{playerId}/wallets/{playerWalletId}?sdk=unity", removePlayerConnectedWalletRequest);
+
+		}
+
+		/// <summary>
 		/// Set player data
 		/// </summary>
 		///
