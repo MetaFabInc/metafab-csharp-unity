@@ -17,6 +17,21 @@ namespace MetafabSdk
 
 
 		/// <summary>
+		/// Get wallet
+		/// </summary>
+		///
+		/// <remarks>
+		/// Returns a wallet object for the provided walletId.
+		/// </remarks>
+		/// <returns>WalletModel</returns>
+		public async UniTask<WalletModel> GetWallet(string walletId, CancellationToken token = default)
+		{
+			
+			return await apiClient.Get<WalletModel>($"/v1/wallets/{walletId}?sdk=unity");
+
+		}
+
+		/// <summary>
 		/// Get wallet balances
 		/// </summary>
 		///

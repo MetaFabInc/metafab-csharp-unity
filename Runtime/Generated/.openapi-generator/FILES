@@ -18,6 +18,7 @@ Payloads/BatchTransferCollectionItemsRequest.cs
 Payloads/BatchTransferCurrencyRequest.cs
 Payloads/BurnCollectionItemRequest.cs
 Payloads/BurnCurrencyRequest.cs
+Payloads/CollectionItem.cs
 Payloads/CollectionModel.cs
 Payloads/ContractModel.cs
 Payloads/CreateCollection200Response.cs
@@ -61,6 +62,8 @@ Payloads/SetCollectionApprovalRequest.cs
 Payloads/SetCollectionItemTimelockRequest.cs
 Payloads/SetCurrencyFeesRequest.cs
 Payloads/SetLootboxManagerLootboxRequest.cs
+Payloads/SetPlayerConnectedWallet200Response.cs
+Payloads/SetPlayerConnectedWalletRequest.cs
 Payloads/SetPlayerDataRequest.cs
 Payloads/SetShopOfferRequest.cs
 Payloads/ShopModel.cs

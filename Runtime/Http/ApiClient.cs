@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -156,7 +157,7 @@ namespace MetafabSdk
 			Dictionary<string, float> ret = new Dictionary<string, float>();
 			for (int i = 0; i < values.Length; i += 2)
 			{
-				if (float.TryParse(values[i + 1], out float n)) {
+				if (float.TryParse(values[i + 1], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out float n)) {
 					ret[values[i]] = n;
 				} else {
 					Debug.LogError($"Couldn't parse {values[i+1]} at position {i+1} as int. response={response.body}");

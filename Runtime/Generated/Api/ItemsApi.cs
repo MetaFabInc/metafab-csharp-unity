@@ -113,11 +113,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns a metadata object for the provided collectionItemId.
 		/// </remarks>
-		/// <returns>Object</returns>
-		public async UniTask<Object> GetCollectionItem(string collectionId, float collectionItemId, CancellationToken token = default)
+		/// <returns>CollectionItem</returns>
+		public async UniTask<CollectionItem> GetCollectionItem(string collectionId, float collectionItemId, CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<Object>($"/v1/collections/{collectionId}/items/{collectionItemId}?sdk=unity");
+			return await apiClient.Get<CollectionItem>($"/v1/collections/{collectionId}/items/{collectionItemId}?sdk=unity");
 
 		}
 
@@ -203,11 +203,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns all collection items as an array of metadata objects.
 		/// </remarks>
-		/// <returns>List&lt;Object&gt;</returns>
-		public async UniTask<List<Object>> GetCollectionItems(string collectionId, CancellationToken token = default)
+		/// <returns>List&lt;CollectionItem&gt;</returns>
+		public async UniTask<List<CollectionItem>> GetCollectionItems(string collectionId, CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<List<Object>>($"/v1/collections/{collectionId}/items?sdk=unity");
+			return await apiClient.Get<List<CollectionItem>>($"/v1/collections/{collectionId}/items?sdk=unity");
 
 		}
 
