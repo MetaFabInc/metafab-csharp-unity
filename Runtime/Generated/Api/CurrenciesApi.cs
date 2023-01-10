@@ -68,7 +68,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns an array of active currencies for the game associated with the provided `X-Game-Key`.
 		/// </remarks>
-		/// <returns>List&lt;GetCurrencies200ResponseInner&gt;</returns>
+		/// <returns>List<GetCurrencies200ResponseInner></returns>
 		public async UniTask<List<GetCurrencies200ResponseInner>> GetCurrencies(CancellationToken token = default)
 		{
 			
@@ -87,7 +87,7 @@ namespace MetafabSdk
 		public async UniTask<float> GetCurrencyBalance(string currencyId, string address,string walletId,CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<float>($"/v1/currencies/{currencyId}/balances?sdk=unity&address={ address }&walletId={ walletId }");
+			return await apiClient.GetFloat($"/v1/currencies/{currencyId}/balances?sdk=unity&address={ address }&walletId={ walletId }");
 
 		}
 

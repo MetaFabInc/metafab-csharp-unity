@@ -38,7 +38,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns an array of active contracts deployed by the game associated with the provided `X-Game-Key`.
 		/// </remarks>
-		/// <returns>List&lt;ContractModel&gt;</returns>
+		/// <returns>List<ContractModel></returns>
 		public async UniTask<List<ContractModel>> GetContracts(CancellationToken token = default)
 		{
 			

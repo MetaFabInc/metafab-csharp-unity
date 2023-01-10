@@ -128,11 +128,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns the current collection item balance of the provided collectionItemId for the provided wallet address or the wallet address associated with the provided walletId.
 		/// </remarks>
-		/// <returns>int</returns>
-		public async UniTask<int> GetCollectionItemBalance(string collectionId, float collectionItemId, string address,string walletId,CancellationToken token = default)
+		/// <returns>float</returns>
+		public async UniTask<float> GetCollectionItemBalance(string collectionId, float collectionItemId, string address,string walletId,CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<int>($"/v1/collections/{collectionId}/items/{collectionItemId}/balances?sdk=unity&address={ address }&walletId={ walletId }");
+			return await apiClient.GetFloat($"/v1/collections/{collectionId}/items/{collectionItemId}/balances?sdk=unity&address={ address }&walletId={ walletId }");
 
 		}
 
@@ -143,7 +143,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns the current collection item balances of all collection items for the provided wallet address or the wallet address associated with the provided walletId.
 		/// </remarks>
-		/// <returns>Dictionary&lt;string, float&gt;</returns>
+		/// <returns>Dictionary<string, float></returns>
 		public async UniTask<Dictionary<string, float>> GetCollectionItemBalances(string collectionId, string address,string walletId,CancellationToken token = default)
 		{
 			
@@ -158,7 +158,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns the currency circulating supply of all collection items.
 		/// </remarks>
-		/// <returns>Dictionary&lt;string, float&gt;</returns>
+		/// <returns>Dictionary<string, float></returns>
 		public async UniTask<Dictionary<string, float>> GetCollectionItemSupplies(string collectionId, CancellationToken token = default)
 		{
 			
@@ -173,11 +173,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns the current circulating supply of the provided collectionItemId.
 		/// </remarks>
-		/// <returns>int</returns>
-		public async UniTask<int> GetCollectionItemSupply(string collectionId, float collectionItemId, string address,string walletId,CancellationToken token = default)
+		/// <returns>float</returns>
+		public async UniTask<float> GetCollectionItemSupply(string collectionId, float collectionItemId, string address,string walletId,CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<int>($"/v1/collections/{collectionId}/items/{collectionItemId}/supplies?sdk=unity&address={ address }&walletId={ walletId }");
+			return await apiClient.GetFloat($"/v1/collections/{collectionId}/items/{collectionItemId}/supplies?sdk=unity&address={ address }&walletId={ walletId }");
 
 		}
 
@@ -188,11 +188,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns a timestamp (in seconds) for when the provided collectionItemId's transfer timelock expires. A value of 0 means the provided collectionItemId does not have a timelock set. Timelocks prevent items of a specific collectionItemId from being transferred until the set timelock timestamp has been surpassed.
 		/// </remarks>
-		/// <returns>int</returns>
-		public async UniTask<int> GetCollectionItemTimelock(string collectionId, float collectionItemId, CancellationToken token = default)
+		/// <returns>float</returns>
+		public async UniTask<float> GetCollectionItemTimelock(string collectionId, float collectionItemId, CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<int>($"/v1/collections/{collectionId}/items/{collectionItemId}/timelocks?sdk=unity");
+			return await apiClient.GetFloat($"/v1/collections/{collectionId}/items/{collectionItemId}/timelocks?sdk=unity");
 
 		}
 
@@ -203,7 +203,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns all collection items as an array of metadata objects.
 		/// </remarks>
-		/// <returns>List&lt;CollectionItem&gt;</returns>
+		/// <returns>List<CollectionItem></returns>
 		public async UniTask<List<CollectionItem>> GetCollectionItems(string collectionId, CancellationToken token = default)
 		{
 			
@@ -233,7 +233,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns an array of active item collections for the game associated with the provided `X-Game-Key`.
 		/// </remarks>
-		/// <returns>List&lt;GetCollections200ResponseInner&gt;</returns>
+		/// <returns>List<GetCollections200ResponseInner></returns>
 		public async UniTask<List<GetCollections200ResponseInner>> GetCollections(CancellationToken token = default)
 		{
 			

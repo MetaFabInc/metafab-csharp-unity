@@ -11,6 +11,7 @@ namespace MetafabSdk
 	{
 		public string id;
 		public string gameId;
+		public string profileId;
 		public string walletId;
 		public string connectedWalletId;
 		public string username;
@@ -18,10 +19,11 @@ namespace MetafabSdk
 		public string updatedAt;
 		public string createdAt;
 
-		public PlayerModel(string id, string gameId, string walletId, string connectedWalletId, string username, string accessToken, string updatedAt, string createdAt)
+		public PlayerModel(string id, string gameId, string profileId, string walletId, string connectedWalletId, string username, string accessToken, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.gameId = gameId;
+			this.profileId = profileId;
 			this.walletId = walletId;
 			this.connectedWalletId = connectedWalletId;
 			this.username = username;

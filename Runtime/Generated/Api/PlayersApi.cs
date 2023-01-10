@@ -83,7 +83,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns all players for the authenticated game as an array of player objects.
 		/// </remarks>
-		/// <returns>List&lt;PublicPlayer&gt;</returns>
+		/// <returns>List<PublicPlayer></returns>
 		public async UniTask<List<PublicPlayer>> GetPlayers(CancellationToken token = default)
 		{
 			

@@ -53,7 +53,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns all shop offers as an array of shop offer objects.
 		/// </remarks>
-		/// <returns>List&lt;ShopOffer&gt;</returns>
+		/// <returns>List<ShopOffer></returns>
 		public async UniTask<List<ShopOffer>> GetShopOffers(string shopId, CancellationToken token = default)
 		{
 			
@@ -68,7 +68,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns an array of active shops for the game associated with the provided `X-Game-Key`.
 		/// </remarks>
-		/// <returns>List&lt;GetShops200ResponseInner&gt;</returns>
+		/// <returns>List<GetShops200ResponseInner></returns>
 		public async UniTask<List<GetShops200ResponseInner>> GetShops(CancellationToken token = default)
 		{
 			

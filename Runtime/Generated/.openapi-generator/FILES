@@ -53,6 +53,7 @@ Payloads/LootboxManagerModel.cs
 Payloads/MintCollectionItemRequest.cs
 Payloads/MintCurrencyRequest.cs
 Payloads/PlayerModel.cs
+Payloads/ProfileModel.cs
 Payloads/PublicGame.cs
 Payloads/PublicPlayer.cs
 Payloads/PublicPlayerWallet.cs

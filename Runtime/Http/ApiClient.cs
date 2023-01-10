@@ -124,6 +124,16 @@ namespace MetafabSdk
 			return await RequestDictionary(HttpMethod.Get, path, headers, token: token);
 		}
 
+		public async UniTask<float> GetFloat(string path, Dictionary<string, string> headers = null, CancellationToken token = default)
+		{
+			return await RequestFloat(HttpMethod.Get, path, headers, token: token);
+		}
+
+		public async UniTask<int> GetInt(string path, Dictionary<string, string> headers = null, CancellationToken token = default)
+		{
+			return await RequestInt(HttpMethod.Get, path, headers, token: token);
+		}
+
 		public async UniTask<HttpResponse> Get(string path, Dictionary<string, string> headers = null, CancellationToken token = default)
 		{
 			return await Request(HttpMethod.Get, path, headers, token: token);
@@ -164,6 +174,30 @@ namespace MetafabSdk
 				}
 			}
 			return ret;
+		}
+
+		async UniTask<float> RequestFloat(HttpMethod method, string path, Dictionary<string, string> headers = null, object body = null, CancellationToken token = default) {
+			var response = await Request(method, path, headers, body, token);
+
+			string newJson = "{ \"data\": " + response.body + "}";
+			Wrapper<string> wrapper = JsonUtility.FromJson<Wrapper<string>>(newJson);
+			if (float.TryParse(wrapper.data, NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out float n)) {
+				return n;
+			} else {
+				throw new Exception($"Couldn't parse {wrapper.data} as float. response={response.body}");
+			}
+		}
+
+		async UniTask<int> RequestInt(HttpMethod method, string path, Dictionary<string, string> headers = null, object body = null, CancellationToken token = default) {
+			var response = await Request(method, path, headers, body, token);
+
+			string newJson = "{ \"data\": " + response.body + "}";
+			Wrapper<string> wrapper = JsonUtility.FromJson<Wrapper<string>>(newJson);
+			if (int.TryParse(wrapper.data, NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out int n)) {
+				return n;
+			} else {
+				throw new Exception($"Couldn't parse {wrapper.data} as int. response={response.body}");
+			}
 		}
 
 		async UniTask<T> Request<T>(HttpMethod method, string path, Dictionary<string, string> headers = null, object body = null, CancellationToken token = default)

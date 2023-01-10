@@ -53,7 +53,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns all lootbox manager lootboxes as an array of lootbox objects.
 		/// </remarks>
-		/// <returns>List&lt;LootboxManagerLootbox&gt;</returns>
+		/// <returns>List<LootboxManagerLootbox></returns>
 		public async UniTask<List<LootboxManagerLootbox>> GetLootboxManagerLootboxes(string lootboxManagerId, CancellationToken token = default)
 		{
 			
@@ -68,7 +68,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Returns an array of active lootbox managers for the game associated with the provided `X-Game-Key`.
 		/// </remarks>
-		/// <returns>List&lt;GetLootboxManagers200ResponseInner&gt;</returns>
+		/// <returns>List<GetLootboxManagers200ResponseInner></returns>
 		public async UniTask<List<GetLootboxManagers200ResponseInner>> GetLootboxManagers(CancellationToken token = default)
 		{
 			
@@ -83,7 +83,7 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Opens a lootbox manager lootbox. The required input item(s) are burned from the wallet or player wallet opening the lootbox. The given output item(s) are given to the wallet or player wallet opening the lootbox.
 		/// </remarks>
-		/// <returns>List&lt;TransactionModel&gt;</returns>
+		/// <returns>List<TransactionModel></returns>
 		public async UniTask<List<TransactionModel>> OpenLootboxManagerLootbox(string lootboxManagerId, string lootboxManagerLootboxId, CancellationToken token = default)
 		{
 			
