@@ -19,6 +19,8 @@ Payloads/BatchTransferCurrencyRequest.cs
 Payloads/BurnCollectionItemRequest.cs
 Payloads/BurnCurrencyRequest.cs
 Payloads/CollectionItem.cs
+Payloads/CollectionItemAttributesInner.cs
+Payloads/CollectionItemAttributesInnerValue.cs
 Payloads/CollectionModel.cs
 Payloads/ContractModel.cs
 Payloads/CreateCollection200Response.cs
@@ -53,6 +55,7 @@ Payloads/LootboxManagerModel.cs
 Payloads/MintCollectionItemRequest.cs
 Payloads/MintCurrencyRequest.cs
 Payloads/PlayerModel.cs
+Payloads/ProfileAuthorizationModel.cs
 Payloads/ProfileModel.cs
 Payloads/PublicGame.cs
 Payloads/PublicPlayer.cs

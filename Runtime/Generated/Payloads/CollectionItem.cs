@@ -14,10 +14,10 @@ namespace MetafabSdk
 		public string name;
 		public string description;
 		public string externalUrl;
-		public List<Object> attributes;
+		public List<CollectionItemAttributesInner> attributes;
 		public Object data;
 
-		public CollectionItem(string id, string image, string name, string description, string externalUrl, List<Object> attributes, Object data)
+		public CollectionItem(string id, string image, string name, string description, string externalUrl, List<CollectionItemAttributesInner> attributes, Object data)
 		{
 			this.id = id;
 			this.image = image;
