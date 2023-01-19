@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
-using Object = System.Object;
+
 
  
 namespace MetafabSdk
@@ -10,9 +10,9 @@ namespace MetafabSdk
 	public class CreateCollectionItemRequestAttributesInner
 	{
 		public string trait_type;
-		public Object value;
+		public string value;
 
-		public CreateCollectionItemRequestAttributesInner(string trait_type, Object value)
+		public CreateCollectionItemRequestAttributesInner(string trait_type, string value)
 		{
 			this.trait_type = trait_type;
 			this.value = value;

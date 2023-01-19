@@ -96,7 +96,7 @@ namespace MetafabSdk
 		/// </summary>
 		///
 		/// <remarks>
-		/// Removes an external wallet from a player account. The player's wallet is reverted to their custodial wallet.
+		/// Removes an external wallet from a player account. The player's wallet is reverted to their managed wallet.
 		/// </remarks>
 		/// <returns>HttpResponse</returns>
 		public async UniTask<HttpResponse> RemovePlayerConnectedWallet(string playerId, string playerWalletId, RemovePlayerConnectedWalletRequest removePlayerConnectedWalletRequest, CancellationToken token = default)
@@ -111,7 +111,7 @@ namespace MetafabSdk
 		/// </summary>
 		///
 		/// <remarks>
-		/// Sets an external wallet as the wallet for a player account. The set wallet can transact gaslessly with all MetaFab related systems through the same MetaFab API calls as custodial wallets without requiring transaction signing or private keys.  This is done through an internal system MetaFab has created that allows an external connected wallet to delegate transaction signing for a specific game's set of contracts to a player's password protected custodial wallet. This allow the custodial wallet to sign and submit transactions to a specific game's related contracts as if they were signed and submitted by the connected external wallet. This also means that all earned tokens, purchased items and any interactions happen and are recorded on chain as the external connected wallet. No additional logic needs to be writted by developers to support both custodial and external wallets, everything just works.  Finally, this endpoint is meant for advanced users. The majority of developers who want to implement external wallet support for their game can do so without any extra work through our whitelabeled wallet connection feature that implements this endpoint underneath the hood without any required work.
+		/// Sets an external wallet as the wallet for a player account. The set wallet can transact gaslessly with all MetaFab related systems through the same MetaFab API calls as managed wallets without requiring transaction signing or private keys.  This is done through an internal system MetaFab has created that allows an external connected wallet to delegate transaction signing for a specific game's set of contracts to a player's password protected managed wallet. This allow the managed wallet to sign and submit transactions to a specific game's related contracts as if they were signed and submitted by the connected external wallet. This also means that all earned tokens, purchased items and any interactions happen and are recorded on chain as the external connected wallet. No additional logic needs to be writted by developers to support both managed and external wallets, everything just works.  Finally, this endpoint is meant for advanced users. The majority of developers who want to implement external wallet support for their game can do so without any extra work through our whitelabeled wallet connection feature that implements this endpoint underneath the hood without any required work.
 		/// </remarks>
 		/// <returns>SetPlayerConnectedWallet200Response</returns>
 		public async UniTask<SetPlayerConnectedWallet200Response> SetPlayerConnectedWallet(string playerId, SetPlayerConnectedWalletRequest setPlayerConnectedWalletRequest, CancellationToken token = default)
