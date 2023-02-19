@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CollectionItem
+	public partial class CollectionItem
 	{
 		public string id;
 		public string image;
@@ -16,6 +16,13 @@ namespace MetafabSdk
 		public string externalUrl;
 		public List<CollectionItemAttributesInner> attributes;
 		public Object data;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public CollectionItem()
+		{
+		}
 
 		public CollectionItem(string id, string image, string name, string description, string externalUrl, List<CollectionItemAttributesInner> attributes, Object data)
 		{

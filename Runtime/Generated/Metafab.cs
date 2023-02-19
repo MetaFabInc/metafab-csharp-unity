@@ -12,6 +12,7 @@ namespace MetafabSdk
 		
 		public static ContractsApi ContractsApi;
 		public static CurrenciesApi CurrenciesApi;
+		public static EcosystemsApi EcosystemsApi;
 		public static GamesApi GamesApi;
 		public static ItemsApi ItemsApi;
 		public static LootboxesApi LootboxesApi;
@@ -45,6 +46,7 @@ namespace MetafabSdk
 			
 			ContractsApi = new ContractsApi(apiClient);
 			CurrenciesApi = new CurrenciesApi(apiClient);
+			EcosystemsApi = new EcosystemsApi(apiClient);
 			GamesApi = new GamesApi(apiClient);
 			ItemsApi = new ItemsApi(apiClient);
 			LootboxesApi = new LootboxesApi(apiClient);

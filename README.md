@@ -212,6 +212,7 @@ public class FullMetafabExample : MonoBehaviour
 		// create collection
 		Log($"Creating collection...");
 		var collection = await Metafab.ItemsApi.CreateCollection(new CreateCollectionRequest(
+			"My Collection",
 			chain.ToString()
 		));
 		Log($"Created collection: {collection}");
@@ -233,6 +234,7 @@ public class FullMetafabExample : MonoBehaviour
 		// create exchange
 		Log($"Creating shop...");
 		var shop = await Metafab.ShopsApi.CreateShop(new CreateShopRequest(
+			"My Shop",
 			chain.ToString()
 		));
 		Log($"Created shop: {shop}");
@@ -324,8 +326,9 @@ public class FullMetafabExample : MonoBehaviour
 		Log($"Created player: {response}");
 
 		return new PublicPlayer(
-			response.id, response.gameId, response.walletId, response.username, response.updatedAt, response.createdAt,
-			new PublicPlayerWallet(response.wallet.id, response.wallet.address)
+			response.id, response.gameId, response.walletId, response.connectedWalletId, response.profileId, response.username, response.updatedAt, response.createdAt,
+			new PublicPlayerCustodialWallet(response.custodialWallet.id, response.custodialWallet.address),
+			new PublicPlayerCustodialWallet(response.wallet.id, response.wallet.address)
 		);
 	}
 

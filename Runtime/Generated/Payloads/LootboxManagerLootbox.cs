@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class LootboxManagerLootbox
+	public partial class LootboxManagerLootbox
 	{
 		public int id;
 		public string inputCollection;
@@ -19,6 +19,13 @@ namespace MetafabSdk
 		public List<int> outputCollectionItemWeights;
 		public int outputTotalItems;
 		public int lastUpdatedAt;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public LootboxManagerLootbox()
+		{
+		}
 
 		public LootboxManagerLootbox(int id, string inputCollection, List<int> inputCollectionItemIds, List<int> inputCollectionItemAmounts, string outputCollection, List<int> outputCollectionItemIds, List<int> outputCollectionItemAmounts, List<int> outputCollectionItemWeights, int outputTotalItems, int lastUpdatedAt)
 		{

@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class WithdrawFromShopRequest
+	public partial class WithdrawFromShopRequest
 	{
 		public string address;
 		public string walletId;
@@ -16,6 +16,13 @@ namespace MetafabSdk
 		public string collectionAddress;
 		public string collectionId;
 		public List<int> itemIds;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public WithdrawFromShopRequest()
+		{
+		}
 
 		public WithdrawFromShopRequest(string address, string walletId, string currencyAddress, string currencyId, string collectionAddress, string collectionId, List<int> itemIds)
 		{

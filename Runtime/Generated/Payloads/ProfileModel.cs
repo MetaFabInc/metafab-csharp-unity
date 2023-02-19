@@ -7,9 +7,10 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class ProfileModel
+	public partial class ProfileModel
 	{
 		public string id;
+		public string ecosystemId;
 		public string walletId;
 		public string connectedWalletId;
 		public string username;
@@ -17,9 +18,17 @@ namespace MetafabSdk
 		public string updatedAt;
 		public string createdAt;
 
-		public ProfileModel(string id, string walletId, string connectedWalletId, string username, string accessToken, string updatedAt, string createdAt)
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public ProfileModel()
+		{
+		}
+
+		public ProfileModel(string id, string ecosystemId, string walletId, string connectedWalletId, string username, string accessToken, string updatedAt, string createdAt)
 		{
 			this.id = id;
+			this.ecosystemId = ecosystemId;
 			this.walletId = walletId;
 			this.connectedWalletId = connectedWalletId;
 			this.username = username;

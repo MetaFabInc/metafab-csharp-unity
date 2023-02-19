@@ -7,12 +7,19 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class SetPlayerConnectedWalletRequest
+	public partial class SetPlayerConnectedWalletRequest
 	{
 		public string address;
 		public int nonce;
 		public string signature;
 		public string chain;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public SetPlayerConnectedWalletRequest()
+		{
+		}
 
 		public SetPlayerConnectedWalletRequest(string address, int nonce, string signature, string chain)
 		{

@@ -7,12 +7,19 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class GetCurrencyFees200Response
+	public partial class GetCurrencyFees200Response
 	{
 		public string recipientAddress;
 		public float basisPoints;
 		public float fixedAmount;
 		public float capAmount;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public GetCurrencyFees200Response()
+		{
+		}
 
 		public GetCurrencyFees200Response(string recipientAddress, float basisPoints, float fixedAmount, float capAmount)
 		{

@@ -7,8 +7,9 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class WriteContractRequestArgsInner
+	public partial class WriteContractRequestArgsInner
 	{
+
 
 		public WriteContractRequestArgsInner()
 		{

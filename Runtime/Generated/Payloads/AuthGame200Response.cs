@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class AuthGame200Response
+	public partial class AuthGame200Response
 	{
 		public string id;
 		public string walletId;
@@ -24,10 +24,18 @@ namespace MetafabSdk
 		public bool? verified;
 		public string updatedAt;
 		public string createdAt;
+		public string walletDecryptKey;
 		public WalletModel wallet;
 		public WalletModel fundingWallet;
 
-		public AuthGame200Response(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt, WalletModel wallet, WalletModel fundingWallet)
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public AuthGame200Response()
+		{
+		}
+
+		public AuthGame200Response(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt, string walletDecryptKey, WalletModel wallet, WalletModel fundingWallet)
 		{
 			this.id = id;
 			this.walletId = walletId;
@@ -44,6 +52,7 @@ namespace MetafabSdk
 			this.verified = verified;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
+			this.walletDecryptKey = walletDecryptKey;
 			this.wallet = wallet;
 			this.fundingWallet = fundingWallet;
 		}

@@ -7,19 +7,28 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class ShopModel
+	public partial class ShopModel
 	{
 		public string id;
 		public string gameId;
 		public string contractId;
+		public string name;
 		public string updatedAt;
 		public string createdAt;
 
-		public ShopModel(string id, string gameId, string contractId, string updatedAt, string createdAt)
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public ShopModel()
+		{
+		}
+
+		public ShopModel(string id, string gameId, string contractId, string name, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.gameId = gameId;
 			this.contractId = contractId;
+			this.name = name;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
 		}

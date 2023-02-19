@@ -7,8 +7,9 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CollectionItemAttributesInnerValue
+	public partial class CollectionItemAttributesInnerValue
 	{
+
 
 		public CollectionItemAttributesInnerValue()
 		{

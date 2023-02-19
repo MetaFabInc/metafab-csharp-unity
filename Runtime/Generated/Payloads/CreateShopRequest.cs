@@ -7,12 +7,21 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CreateShopRequest
+	public partial class CreateShopRequest
 	{
+		public string name;
 		public string chain;
 
-		public CreateShopRequest(string chain)
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public CreateShopRequest()
 		{
+		}
+
+		public CreateShopRequest(string name, string chain)
+		{
+			this.name = name;
 			this.chain = chain;
 		}
 

@@ -7,7 +7,7 @@ using Object = System.Object;
 
 namespace MetafabSdk
 {
-	public class WalletsApi
+	public partial class WalletsApi
 	{
 		ApiClient apiClient;
 
@@ -15,6 +15,21 @@ namespace MetafabSdk
 			this.apiClient = apiClient;
 		}
 
+
+		/// <summary>
+		/// Create wallet signature
+		/// </summary>
+		///
+		/// <remarks>
+		/// Creates a wallet signature from a plaintext message using the wallet for the provided walletId and walletDecryptKey. Wallet signatures cannot be generated for EOA wallets.
+		/// </remarks>
+		/// <returns>string</returns>
+		public async UniTask<string> CreateWalletSignature(string walletId, CreateWalletSignatureRequest createWalletSignatureRequest, CancellationToken token = default)
+		{
+			
+			return await apiClient.Post<string>($"/v1/wallets/{walletId}/signatures?sdk=unity", createWalletSignatureRequest);
+
+		}
 
 		/// <summary>
 		/// Get wallet

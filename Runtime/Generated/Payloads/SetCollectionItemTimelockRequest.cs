@@ -7,9 +7,16 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class SetCollectionItemTimelockRequest
+	public partial class SetCollectionItemTimelockRequest
 	{
 		public int timelock;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public SetCollectionItemTimelockRequest()
+		{
+		}
 
 		public SetCollectionItemTimelockRequest(int timelock)
 		{

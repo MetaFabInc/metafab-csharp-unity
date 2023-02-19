@@ -7,7 +7,7 @@ using Object = System.Object;
 
 namespace MetafabSdk
 {
-	public class GamesApi
+	public partial class GamesApi
 	{
 		ApiClient apiClient;
 
@@ -68,11 +68,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Update various fields specific to a game. Such as changing its password, resetting its published or secret key, or updating its RPCs.
 		/// </remarks>
-		/// <returns>GameModel</returns>
-		public async UniTask<GameModel> UpdateGame(string gameId, UpdateGameRequest updateGameRequest, CancellationToken token = default)
+		/// <returns>UpdateGame200Response</returns>
+		public async UniTask<UpdateGame200Response> UpdateGame(string gameId, UpdateGameRequest updateGameRequest, CancellationToken token = default)
 		{
 			
-			return await apiClient.Patch<GameModel>($"/v1/games/{gameId}?sdk=unity", updateGameRequest);
+			return await apiClient.Patch<UpdateGame200Response>($"/v1/games/{gameId}?sdk=unity", updateGameRequest);
 
 		}
 	}

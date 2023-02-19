@@ -7,7 +7,7 @@ using Object = System.Object;
 
 namespace MetafabSdk
 {
-	public class TransactionsApi
+	public partial class TransactionsApi
 	{
 		ApiClient apiClient;
 

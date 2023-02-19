@@ -7,10 +7,17 @@ using System.Collections.Generic;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CreateCollectionItemRequestAttributesInner
+	public partial class CreateCollectionItemRequestAttributesInner
 	{
 		public string trait_type;
 		public string value;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public CreateCollectionItemRequestAttributesInner()
+		{
+		}
 
 		public CreateCollectionItemRequestAttributesInner(string trait_type, string value)
 		{

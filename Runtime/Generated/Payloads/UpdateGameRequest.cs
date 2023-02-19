@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class UpdateGameRequest
+	public partial class UpdateGameRequest
 	{
 		public string name;
 		public string email;
@@ -20,6 +20,13 @@ namespace MetafabSdk
 		public string primaryColorHex;
 		public bool? resetPublishedKey;
 		public bool? resetSecretKey;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public UpdateGameRequest()
+		{
+		}
 
 		public UpdateGameRequest(string name, string email, string currentPassword, string newPassword, Dictionary<string, string> rpcs, List<string> redirectUris, string iconImageBase64, string coverImageBase64, string primaryColorHex, bool? resetPublishedKey, bool? resetSecretKey)
 		{

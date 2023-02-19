@@ -7,11 +7,18 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class MintCurrencyRequest
+	public partial class MintCurrencyRequest
 	{
 		public float amount;
 		public string address;
 		public string walletId;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public MintCurrencyRequest()
+		{
+		}
 
 		public MintCurrencyRequest(float amount, string address, string walletId)
 		{

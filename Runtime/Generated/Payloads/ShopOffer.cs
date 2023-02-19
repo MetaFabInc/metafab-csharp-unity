@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class ShopOffer
+	public partial class ShopOffer
 	{
 		public int id;
 		public string inputCollection;
@@ -23,6 +23,13 @@ namespace MetafabSdk
 		public int uses;
 		public int maxUses;
 		public int lastUpdatedAt;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public ShopOffer()
+		{
+		}
 
 		public ShopOffer(int id, string inputCollection, List<int> inputCollectionItemIds, List<int> inputCollectionItemAmounts, string inputCurrency, float inputCurrencyAmount, string outputCollection, List<int> outputCollectionItemIds, List<int> outputCollectionItemAmounts, string outputCurrency, float outputCurrencyAmount, int uses, int maxUses, int lastUpdatedAt)
 		{

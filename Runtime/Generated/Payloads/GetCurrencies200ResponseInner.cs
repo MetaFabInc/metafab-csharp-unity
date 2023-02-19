@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class GetCurrencies200ResponseInner
+	public partial class GetCurrencies200ResponseInner
 	{
 		public string id;
 		public string gameId;
@@ -18,6 +18,13 @@ namespace MetafabSdk
 		public string updatedAt;
 		public string createdAt;
 		public ContractModel contract;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public GetCurrencies200ResponseInner()
+		{
+		}
 
 		public GetCurrencies200ResponseInner(string id, string gameId, string contractId, string name, string symbol, int supplyCap, string updatedAt, string createdAt, ContractModel contract)
 		{

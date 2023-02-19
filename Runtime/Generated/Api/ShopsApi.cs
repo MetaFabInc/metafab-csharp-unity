@@ -7,7 +7,7 @@ using Object = System.Object;
 
 namespace MetafabSdk
 {
-	public class ShopsApi
+	public partial class ShopsApi
 	{
 		ApiClient apiClient;
 
@@ -42,7 +42,7 @@ namespace MetafabSdk
 		public async UniTask<ShopOffer> GetShopOffer(string shopId, string shopOfferId, CancellationToken token = default)
 		{
 			
-			return await apiClient.Get<ShopOffer>($"/v1/shops/{shopId}/items/{shopOfferId}?sdk=unity");
+			return await apiClient.Get<ShopOffer>($"/v1/shops/{shopId}/offers/{shopOfferId}?sdk=unity");
 
 		}
 

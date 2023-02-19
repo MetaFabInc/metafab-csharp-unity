@@ -7,7 +7,7 @@ using Object = System.Object;
 
 namespace MetafabSdk
 {
-	public class LootboxesApi
+	public partial class LootboxesApi
 	{
 		ApiClient apiClient;
 

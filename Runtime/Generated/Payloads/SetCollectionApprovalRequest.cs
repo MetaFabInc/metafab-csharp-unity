@@ -7,11 +7,18 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class SetCollectionApprovalRequest
+	public partial class SetCollectionApprovalRequest
 	{
 		public bool? approved;
 		public string address;
 		public List<string> walletId;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public SetCollectionApprovalRequest()
+		{
+		}
 
 		public SetCollectionApprovalRequest(bool? approved, string address, List<string> walletId)
 		{

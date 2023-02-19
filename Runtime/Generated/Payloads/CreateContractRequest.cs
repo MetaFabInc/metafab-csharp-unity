@@ -7,12 +7,19 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class CreateContractRequest
+	public partial class CreateContractRequest
 	{
 		public string address;
 		public string forwarderAddress;
 		public string abi;
 		public string chain;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public CreateContractRequest()
+		{
+		}
 
 		public CreateContractRequest(string address, string forwarderAddress, string abi, string chain)
 		{

@@ -7,11 +7,18 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class GrantCurrencyRoleRequest
+	public partial class GrantCurrencyRoleRequest
 	{
 		public string role;
 		public string address;
 		public string walletId;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public GrantCurrencyRoleRequest()
+		{
+		}
 
 		public GrantCurrencyRoleRequest(string role, string address, string walletId)
 		{

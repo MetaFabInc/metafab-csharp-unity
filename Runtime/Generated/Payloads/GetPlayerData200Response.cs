@@ -7,10 +7,17 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class GetPlayerData200Response
+	public partial class GetPlayerData200Response
 	{
 		public Object protectedData;
 		public Object publicData;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public GetPlayerData200Response()
+		{
+		}
 
 		public GetPlayerData200Response(Object protectedData, Object publicData)
 		{

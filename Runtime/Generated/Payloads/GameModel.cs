@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class GameModel
+	public partial class GameModel
 	{
 		public string id;
 		public string walletId;
@@ -24,6 +24,13 @@ namespace MetafabSdk
 		public bool? verified;
 		public string updatedAt;
 		public string createdAt;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public GameModel()
+		{
+		}
 
 		public GameModel(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt)
 		{

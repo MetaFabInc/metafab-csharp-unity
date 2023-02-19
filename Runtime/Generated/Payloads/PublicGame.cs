@@ -7,7 +7,7 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class PublicGame
+	public partial class PublicGame
 	{
 		public string id;
 		public string name;
@@ -18,6 +18,13 @@ namespace MetafabSdk
 		public string primaryColorHex;
 		public string updatedAt;
 		public string createdAt;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public PublicGame()
+		{
+		}
 
 		public PublicGame(string id, string name, string publishedKey, List<string> redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string updatedAt, string createdAt)
 		{

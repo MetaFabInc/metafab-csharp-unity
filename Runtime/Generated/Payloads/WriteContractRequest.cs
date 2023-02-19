@@ -7,10 +7,17 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public class WriteContractRequest
+	public partial class WriteContractRequest
 	{
 		public string func;
 		public List<WriteContractRequestArgsInner> args;
+
+		/// <summary>
+		/// Empty constructor is for use in generics with where: new()
+		/// </summary>
+		public WriteContractRequest()
+		{
+		}
 
 		public WriteContractRequest(string func, List<WriteContractRequestArgsInner> args)
 		{
