@@ -17,6 +17,8 @@ namespace MetafabSdk
 		public string username;
 		public string accessToken;
 		public Object profilePermissions;
+		public string serviceAuthLookup;
+		public string accessTokenExpiresAt;
 		public string updatedAt;
 		public string createdAt;
 		public WalletModel wallet;
@@ -29,7 +31,7 @@ namespace MetafabSdk
 		{
 		}
 
-		public UpdateProfilePlayer200Response(string id, string gameId, string walletId, string connectedWalletId, string profileId, string username, string accessToken, Object profilePermissions, string updatedAt, string createdAt, WalletModel wallet, WalletModel custodialWallet)
+		public UpdateProfilePlayer200Response(string id, string gameId, string walletId, string connectedWalletId, string profileId, string username, string accessToken, Object profilePermissions, string serviceAuthLookup, string accessTokenExpiresAt, string updatedAt, string createdAt, WalletModel wallet, WalletModel custodialWallet)
 		{
 			this.id = id;
 			this.gameId = gameId;
@@ -39,6 +41,8 @@ namespace MetafabSdk
 			this.username = username;
 			this.accessToken = accessToken;
 			this.profilePermissions = profilePermissions;
+			this.serviceAuthLookup = serviceAuthLookup;
+			this.accessTokenExpiresAt = accessTokenExpiresAt;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
 			this.wallet = wallet;

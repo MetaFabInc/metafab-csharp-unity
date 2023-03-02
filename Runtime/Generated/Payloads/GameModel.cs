@@ -22,6 +22,8 @@ namespace MetafabSdk
 		public string publishedKey;
 		public string secretKey;
 		public bool? verified;
+		public string saltCiphertext;
+		public string discordClientId;
 		public string updatedAt;
 		public string createdAt;
 
@@ -32,7 +34,7 @@ namespace MetafabSdk
 		{
 		}
 
-		public GameModel(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string updatedAt, string createdAt)
+		public GameModel(string id, string walletId, string fundingWalletId, string email, string name, Object rpcs, Object redirectUris, string iconImageUrl, string coverImageUrl, string primaryColorHex, string publishedKey, string secretKey, bool? verified, string saltCiphertext, string discordClientId, string updatedAt, string createdAt)
 		{
 			this.id = id;
 			this.walletId = walletId;
@@ -47,6 +49,8 @@ namespace MetafabSdk
 			this.publishedKey = publishedKey;
 			this.secretKey = secretKey;
 			this.verified = verified;
+			this.saltCiphertext = saltCiphertext;
+			this.discordClientId = discordClientId;
 			this.updatedAt = updatedAt;
 			this.createdAt = createdAt;
 		}

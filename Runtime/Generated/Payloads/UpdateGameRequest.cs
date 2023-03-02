@@ -18,6 +18,7 @@ namespace MetafabSdk
 		public string iconImageBase64;
 		public string coverImageBase64;
 		public string primaryColorHex;
+		public string discordClientId;
 		public bool? resetPublishedKey;
 		public bool? resetSecretKey;
 
@@ -28,7 +29,7 @@ namespace MetafabSdk
 		{
 		}
 
-		public UpdateGameRequest(string name, string email, string currentPassword, string newPassword, Dictionary<string, string> rpcs, List<string> redirectUris, string iconImageBase64, string coverImageBase64, string primaryColorHex, bool? resetPublishedKey, bool? resetSecretKey)
+		public UpdateGameRequest(string name, string email, string currentPassword, string newPassword, Dictionary<string, string> rpcs, List<string> redirectUris, string iconImageBase64, string coverImageBase64, string primaryColorHex, string discordClientId, bool? resetPublishedKey, bool? resetSecretKey)
 		{
 			this.name = name;
 			this.email = email;
@@ -39,6 +40,7 @@ namespace MetafabSdk
 			this.iconImageBase64 = iconImageBase64;
 			this.coverImageBase64 = coverImageBase64;
 			this.primaryColorHex = primaryColorHex;
+			this.discordClientId = discordClientId;
 			this.resetPublishedKey = resetPublishedKey;
 			this.resetSecretKey = resetSecretKey;
 		}

@@ -24,10 +24,10 @@ namespace MetafabSdk
 		/// Returns an executed transaction object for the provided transactionId. Transactions are created by MetaFab when interacting with contracts, currencies, items and other MetaFab resources.
 		/// </remarks>
 		/// <returns>TransactionModel</returns>
-		public async UniTask<TransactionModel> GetTransaction(string transactionId, CancellationToken token = default)
+		public async UniTask<TransactionModel> GetTransaction(string transactionId, CancellationToken token = default, Dictionary<string, string> headers = null)
 		{
 			
-			return await apiClient.Get<TransactionModel>($"/v1/transactions/{transactionId}?sdk=unity");
+			return await apiClient.Get<TransactionModel>($"/v1/transactions/{transactionId}?sdk=unity", headers: headers);
 
 		}
 	}

@@ -20,6 +20,8 @@ namespace MetafabSdk
 		public string Password;
 		[Tooltip("Log Level")]
 		public LogLevel LogLevel;
+		[Tooltip("Wallet Decrypt Key")]
+		public string WalletDecryptKey;
 
 		#region static
 		private static MetafabSettings _instance;
@@ -32,6 +34,7 @@ namespace MetafabSdk
 				Config.LogLevel = _instance.LogLevel;
 				Config.Email = _instance.Email;
 				Config.Password = _instance.Password;
+				Config.WalletDecryptKey = _instance.WalletDecryptKey;
 				Config.PublishedKey = _instance.PublishedKey;
 			}
 		}

@@ -15,6 +15,7 @@ Payloads/AuthGame200Response.cs
 Payloads/AuthGame200ResponseAllOf.cs
 Payloads/AuthPlayer200Response.cs
 Payloads/AuthPlayer200ResponseAllOf.cs
+Payloads/AuthPlayerByServiceRequest.cs
 Payloads/AuthProfile200Response.cs
 Payloads/BatchMintCollectionItemsRequest.cs
 Payloads/BatchTransferCollectionItemsRequest.cs

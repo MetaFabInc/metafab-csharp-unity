@@ -39,6 +39,11 @@ namespace MetafabSdk
 			set => apiClient.headers["X-Password"] = value;
 		}
 
+		public static string WalletDecryptKey {
+			get => apiClient.headers.ContainsKey("X-Wallet-Decrypt-Key") ? apiClient.headers["X-Wallet-Decrypt-Key"] : null;
+			set => apiClient.headers["X-Wallet-Decrypt-Key"] = value;
+		}
+
 		static Metafab()
 		{
 			apiClient = new ApiClient(baseUrl);

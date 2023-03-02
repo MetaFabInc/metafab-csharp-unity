@@ -5,5 +5,6 @@ namespace MetafabSdk {
 
 		public static string Email;
 		public static string Password;
+		public static string WalletDecryptKey;
 	}
 }
