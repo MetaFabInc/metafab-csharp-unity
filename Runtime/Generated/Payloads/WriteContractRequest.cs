@@ -11,6 +11,7 @@ namespace MetafabSdk
 	{
 		public string func;
 		public List<WriteContractRequestArgsInner> args;
+		public WriteContractRequestGaslessOverrides gaslessOverrides;
 
 		/// <summary>
 		/// Empty constructor is for use in generics with where: new()
@@ -19,10 +20,11 @@ namespace MetafabSdk
 		{
 		}
 
-		public WriteContractRequest(string func, List<WriteContractRequestArgsInner> args)
+		public WriteContractRequest(string func, List<WriteContractRequestArgsInner> args, WriteContractRequestGaslessOverrides gaslessOverrides)
 		{
 			this.func = func;
 			this.args = args;
+			this.gaslessOverrides = gaslessOverrides;
 		}
 
 		public override string ToString()

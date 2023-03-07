@@ -104,3 +104,4 @@ Payloads/WalletModel.cs
 Payloads/WithdrawFromShopRequest.cs
 Payloads/WriteContractRequest.cs
 Payloads/WriteContractRequestArgsInner.cs
+Payloads/WriteContractRequestGaslessOverrides.cs
