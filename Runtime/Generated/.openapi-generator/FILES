@@ -46,6 +46,7 @@ Payloads/CreateProfilePlayerRequest.cs
 Payloads/CreateProfileRequest.cs
 Payloads/CreateShop200Response.cs
 Payloads/CreateShopRequest.cs
+Payloads/CreateWalletSignature200Response.cs
 Payloads/CreateWalletSignatureRequest.cs
 Payloads/CurrencyModel.cs
 Payloads/EcosystemGameModel.cs

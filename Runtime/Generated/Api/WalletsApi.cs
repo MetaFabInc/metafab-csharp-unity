@@ -23,11 +23,11 @@ namespace MetafabSdk
 		/// <remarks>
 		/// Creates a wallet signature from a plaintext message using the wallet for the provided walletId and walletDecryptKey. Wallet signatures cannot be generated for EOA wallets.
 		/// </remarks>
-		/// <returns>string</returns>
-		public async UniTask<string> CreateWalletSignature(string walletId, CreateWalletSignatureRequest createWalletSignatureRequest, CancellationToken token = default, Dictionary<string, string> headers = null)
+		/// <returns>CreateWalletSignature200Response</returns>
+		public async UniTask<CreateWalletSignature200Response> CreateWalletSignature(string walletId, CreateWalletSignatureRequest createWalletSignatureRequest, CancellationToken token = default, Dictionary<string, string> headers = null)
 		{
 			
-			return await apiClient.Post<string>($"/v1/wallets/{walletId}/signatures?sdk=unity", createWalletSignatureRequest, headers: headers);
+			return await apiClient.Post<CreateWalletSignature200Response>($"/v1/wallets/{walletId}/signatures?sdk=unity", createWalletSignatureRequest, headers: headers);
 
 		}
 

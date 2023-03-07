@@ -7,24 +7,20 @@ using Object = System.Object;
 namespace MetafabSdk
 {
 	[Serializable]
-	public partial class WalletModel
+	public partial class CreateWalletSignature200Response
 	{
-		public string id;
-		public string address;
-		public Object backupCiphertexts;
+		public string signature;
 
 		/// <summary>
 		/// Empty constructor is for use in generics with where: new()
 		/// </summary>
-		public WalletModel()
+		public CreateWalletSignature200Response()
 		{
 		}
 
-		public WalletModel(string id, string address, Object backupCiphertexts)
+		public CreateWalletSignature200Response(string signature)
 		{
-			this.id = id;
-			this.address = address;
-			this.backupCiphertexts = backupCiphertexts;
+			this.signature = signature;
 		}
 
 		public override string ToString()
