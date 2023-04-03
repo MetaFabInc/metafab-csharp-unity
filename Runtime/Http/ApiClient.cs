@@ -226,7 +226,10 @@ namespace MetafabSdk
 			headers["Accept"] = "application/json";
 			foreach (var entry in this.headers)
 			{
-				headers[entry.Key] = entry.Value;
+				if (!headers.ContainsKey(entry.Key))
+				{
+					headers[entry.Key] = entry.Value;
+				}
 			}
 
 			if (!string.IsNullOrEmpty(accessToken))
